@@ -1,3 +1,5 @@
+# Create Profile using command --> "aws configure --profile myprofile"
+
 #!/bin/bash
 function dumpstreams() {
   aws $AWSARGS logs describe-log-streams \
