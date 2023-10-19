@@ -11,7 +11,7 @@ dumpstreams() {
       aws $AWSARGS logs get-log-events \
         --start-from-head --start-time $starttime \
         --log-group-name $LOGGROUP --log-stream-name $stream --output text \
-        >> a.log
+        --output text > a.log
     done
 }
 
