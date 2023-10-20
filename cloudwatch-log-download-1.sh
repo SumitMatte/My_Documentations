@@ -15,6 +15,11 @@ dumpstreams() {
     done
 }
 
+# New Command
+AWSCLI_PATH=$(which aws)
+echo "AWS CLI Path: $AWSCLI_PATH"
+#AWSARGS="--profile myprofile --region ap-south-1"
+
 AWSARGS="--profile myprofile --region ap-south-1"
 LOGGROUP="/var/log/messages"
 TAIL=
@@ -30,3 +35,4 @@ if [ -n "$TAIL" ]; then
     dumpstreams
   done
 fi
+
